@@ -1,5 +1,7 @@
 package com.java.project2;
 
+import java.util.ArrayList;
+
 public class Coin implements Comparable<Coin> {
     private int value;
 

@@ -1,17 +1,28 @@
 package com.java.project2;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class InterfaceTest {
     public static void main(String[] args) {
-        Coin[] arr = {
-                new Coin(10),
-                new Coin(50),
-                new Coin(100),
-                new Coin(500)
-        };
+        Coin[] arr = new Coin[5];
+        arr[0] = new Coin(100);
 
-        Arrays.sort(arr);
-        for (Coin n : arr) System.out.println(n);
+        ArrayList<Coin> arrList = new ArrayList<>();
+        arrList.add(new Coin(100));
+        arrList.add(new Coin(50));
+        arrList.add(new Coin(300));
+
+        arrList.add(1, new Coin(200));
+
+        Coin c = arrList.get(2);
+        System.out.println("2번 인덱스의 값 : " + c.getValue());
+
+        arrList.clear();
+
+        /*
+        Arrays.sort(arrList);
+        for (Coin n : arrList) System.out.println(n);
+         */
     }
 }
